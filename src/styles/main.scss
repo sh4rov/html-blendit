@@ -1,0 +1,18 @@
+@import 'utils/utils';
+
+html { box-sizing: border-box; }
+
+*, ::before, ::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $clr-text-primary;
+}
+
+@import '../modules/modules';

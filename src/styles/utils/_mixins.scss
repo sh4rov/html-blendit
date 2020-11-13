@@ -1,0 +1,10 @@
+@mixin clear-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin clear-link {
+  text-decoration: none;
+  color: currentColor;
+}
