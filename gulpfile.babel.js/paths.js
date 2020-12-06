@@ -19,6 +19,7 @@ module.exports = {
   
   scripts: {
     src: './src/js/**/*.js',
+    modules: './src/modules/**/*.js',
     dest: './dist/js',
 
     watch: [
