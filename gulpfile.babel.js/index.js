@@ -1,16 +1,17 @@
-import { src, dest, watch, series, paraller } from 'gulp'
-
-import sass from 'gulp-sass'
-import debug from 'gulp-debug'
-import newer from 'gulp-newer'
-import htmlmin from 'gulp-htmlmin'
-import fileinclude from 'gulp-file-include'
+import { series, parallel } from 'gulp'
 
 // import tasks
 import html from './tasks/html'
 import styles from './tasks/styles'
 import serve from './tasks/serve'
+import js from './tasks/scripts'
+import clean from './tasks/clean'
 
-export { html, styles }
-
+export { html, styles, serve, js, clean }
 export default serve
+
+// Build static files
+export const staticFiles = parallel(html, styles, js)
+
+// prod
+export const b = series(staticFiles, serve)

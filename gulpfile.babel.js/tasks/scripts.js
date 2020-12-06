@@ -1,6 +1,10 @@
 import { src, dest } from 'gulp'
 import plumber from 'gulp-plumber'
 import debug from 'gulp-debug'
+import babel from 'gulp-babel'
+import concat from 'gulp-concat'
+import eslint from 'gulp-eslint'
+import terser from 'gulp-terser'
 
 const paths = require('../paths')
 
@@ -9,8 +13,15 @@ let scripts = () => {
     sourcemaps: 'true',
   })
     .pipe(plumber())
-    .pipe(debgu())
-    .pipe(dest(paths.scripts.dest))
+    .pipe(debug())
+    .pipe(babel())
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(terser())
+    .pipe(concat('main.min.js'))
+    .pipe(dest(paths.scripts.dest), {
+      sourcemaps: './maps'
+    })
 }
 
 module.exports = scripts;

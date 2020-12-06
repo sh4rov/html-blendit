@@ -1,8 +1,6 @@
 import { series, watch } from 'gulp'
 import bs from 'browser-sync'
 
-const reload = bs.reload;
-
 import html from './html'
 import styles from './styles'
 

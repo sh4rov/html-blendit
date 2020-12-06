@@ -1,5 +1,5 @@
+import { src, dest } from "gulp";
 import fileinclude from "gulp-file-include";
-import { src, dest, series, parallel } from "gulp";
 import debug from 'gulp-debug';
 import prettier from 'gulp-prettier'
 import del from 'del';
