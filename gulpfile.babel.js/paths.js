@@ -27,5 +27,10 @@ module.exports = {
       './src/modules/**/*.js',
       './src/components/**/*.js'
     ]
+  },
+
+  fonts: {
+    src: './src/fonts/**/*.{ttf,woff,woff2}',
+    dest: './dist/fonts'
   }
 }
