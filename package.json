@@ -30,10 +30,14 @@
     "gulp-eslint": "^6.0.0",
     "gulp-file-include": "^2.2.2",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-inject": "^5.0.5",
     "gulp-newer": "^1.4.0",
     "gulp-plumber": "^1.2.1",
     "gulp-prettier": "^3.0.0",
     "gulp-sass": "^4.1.0",
-    "gulp-terser": "^2.0.0"
+    "gulp-svgmin": "^3.0.0",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-terser": "^2.0.0",
+    "path": "^0.12.7"
   }
 }

@@ -1,4 +1,5 @@
 module.exports = {
+
   src: './src',
   dest: './dist',
 
@@ -32,5 +33,10 @@ module.exports = {
   fonts: {
     src: './src/fonts/**/*.{ttf,woff,woff2}',
     dest: './dist/fonts'
+  },
+  
+  svg: {
+    src: './src/img/svg',
+    dest: './dist/img'
   }
 }
