@@ -32,9 +32,8 @@ let svgSprite = () => {
   return src('./src/layout/_layout-header.html')
     .pipe(inject(svgs, { transform: fileContents }))
     .pipe(debug({
-      title: 'unicorn:'
+      title: 'debug:'
     }))
-    .pipe(prettier({ singleQuote: true }))
     .pipe(dest('./src/layout'))
 }
 
