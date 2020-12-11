@@ -13,7 +13,7 @@ export { html, styles, serve, js, clean, copyFonts, svgSprite }
 export default serve
 
 // Build static files
-export const staticFiles = parallel(html, styles, js)
+export const staticFiles = series(html, svgSprite, styles, js)
 
 // prod
-export const b = series(staticFiles, serve)
+export const b = series(clean, staticFiles, serve)
