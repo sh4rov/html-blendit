@@ -9,8 +9,6 @@ import plumber from 'gulp-plumber'
 
 import paths from '../paths'
 
-// let headerPath = fs.readFileSync('./src/layout/_layout-header.html')
-// let footerPath = fs.readFileSync('./src/layout/_layout-footer.html')
 let newerSrc = paths.views.watch
 
 let html = () => {
@@ -18,8 +16,6 @@ let html = () => {
     .pipe(plumber())
     .pipe(debug())
     .pipe(newer(newerSrc))
-    // .pipe(headerfooter.header(headerPath))
-    // .pipe(headerfooter.footer(footerPath))
     .pipe(fileinclude())
     .pipe(prettier({ singleQuote: true }))
     .pipe(dest(paths.views.dest))
