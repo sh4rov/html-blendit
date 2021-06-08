@@ -10,10 +10,11 @@ import copyFonts from './tasks/fonts'
 import svgSprite from './tasks/svg-sprite'
 
 export { html, styles, serve, js, clean, copyFonts, svgSprite }
-export default serve
 
 // Build static files
 export const staticFiles = series(html, svgSprite, styles, js)
 
-// prod
-export const b = series(clean, staticFiles, serve)
+// Start Dev
+export const dev = series(clean, staticFiles, serve)
+
+export default dev
